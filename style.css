@@ -1,0 +1,699 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-bg {
+    background-color: #141d3c;
+    /* background-image: url(./img/bg.svg); */
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    border: none;
+}
+
+button:active {
+    border-color: #111730;
+    background-color: #141d3c;
+}
+
+.dapp-font {
+    font-family: "Mazzard-MSemiBold", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    color: transparent;
+    line-height: 67px;
+    white-space: nowrap;
+    background: linear-gradient(92deg, #4A9BE8 -40.15%, #FFF 104.82%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+ /*Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 46px;
+}
+
+.header-logo {
+    width: 72px;
+    height: 72px;
+}
+
+.header span {
+    margin-left: -20%;
+    font-family: "Mazzard-MSemiBold", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    color: transparent;
+    line-height: 67px;
+    white-space: nowrap;
+    background: linear-gradient(92deg, #4A9BE8 -40.15%, #FFF 104.82%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header ul {
+    height: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: distribute;
+    justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+    align-items: center;
+    list-style-type: none;
+    color: white;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header ul li{
+    font-family: "Mazzard-MMedium", Helvetica;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    line-height: 38px;
+    white-space: nowrap;
+    margin-right: 43px;
+}
+
+.header-item:after {
+    display: block;
+    width: 20px;
+    height: 4px;
+    color: #4A9BE8;
+}
+
+.header-button {
+    display: flex;
+    margin-left: 10%;
+    width: 340px;
+    height: 60px;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 58px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #38b9fc;
+    font-family: "Mazzard-MMedium", Helvetica;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header-button:hover {
+    border-radius: 16px;
+    box-shadow: 0px 16px 19.3px #5e81ff3b;
+}
+
+.header ul li select {
+    width: 70px;
+    height: 44px;
+    text-align: center;
+    gap: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #38b9fc;
+    background-color: transparent;
+    font-family: "Mazzard-MMedium", Helvetica;
+    font-weight: 500;
+    background: #141d3c;
+    color: #ffffff;
+    font-size: 14px;
+}
+  
+
+/* First screen */
+
+.first-screen {
+    display: flex;
+    justify-content: center;
+    margin-top: 165px;
+}
+
+.f-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.first-screen .dapp-font {
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 110%;
+}
+
+.text-title {
+    margin-top: 22px;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text {
+    width: 640px;
+    margin-top: 22px;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.first-screen-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+    padding: 18px 58px;
+    gap: 10px;
+    border-radius: 16px;
+    background: #38B9FC;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.first-screen-button:hover {
+    box-shadow: 0px 16px 19.3px 0px rgba(94, 129, 255, 0.23);
+}  
+
+.ransomware {
+    width: 600px;
+    height: 600px;
+}
+
+
+/* Second screen */
+
+.second-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 172px;
+}
+
+.safebox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    flex-wrap: nowrap;
+}
+
+.container .safebox-img {
+    width: 306px;
+    height: 306px;
+    object-fit: cover;
+    margin-left: -80px;
+}
+
+.desc {
+    width: 630px;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 60px;
+    margin-top: -100px;
+}
+
+.dapp-text {
+    color: linear-gradient(180deg, rgb(74, 155, 232) 0%, rgb(255, 255, 255) 100%);
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 555px;
+    background: rgba(255, 255, 255, 0.41);
+}
+
+.numbers {
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.text-1 {
+    width: 205px;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    margin-top: 160px;
+    margin-left: 58px;
+}
+
+.lock {
+    width: 511px;
+    height: 511px;
+    margin-top: -250px;
+    margin-left: 220px;
+}
+
+
+/* Third screen */
+
+.third-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.container .cloud-lock {
+    width: 287px;
+    height: 287px;
+    object-fit: cover;
+}
+
+.why {
+    width: 631px;
+    font-family: "Mazzard-SemiBold", Helvetica;
+    font-weight: 600;
+    color: transparent;
+    font-size: 48px;
+    text-align: center;
+    line-height: 60px;
+    color: #ffffff;
+}
+  
+.web-3 {
+    color: #38b9fc;
+}
+
+.p {
+    width: 1005px;
+    font-family: "Mazzard-MLight", Helvetica;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 38px;
+}
+  
+
+/* Fourth screen */
+
+.fourth-screen {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fourth-screen h2 {
+    width: 100%;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.fourth-screen .dapp-font {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.benefits-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.benefits-desc {
+    width: 370px;
+}
+
+.benefits-desc img {
+    margin-top: 60px;
+    width: 108px;
+    height: 108px;
+}
+
+.benefits-title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Mazzard";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.benefits-description {
+    margin-top: -50px;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 38px;
+}
+
+.contact-button {
+    margin-top: 50px;
+    gap: 10px;
+    padding: 24px 70px;
+    background-color: #38b9fc;
+    border-radius: 16px;
+    overflow: hidden;
+    color: white;
+}
+
+.contact-button:hover {
+    box-shadow: 0px 16px 19.3px #5e81ff3b;
+}
+
+
+/* Fifth screen */
+
+.fifth-screen {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    font-family: "Mazzard";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
+
+}
+
+
+/* Sixth screen  */
+
+.sixth-screen {
+    margin-top: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sixth-screen .p {
+    margin-top: 20px;
+}
+
+.clients-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.client {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 278px;
+    height: 145px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.21);
+}
+
+.client img {
+    width: 62px;
+    height: 56px;
+}
+
+.client .text {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sixth-screen .title {
+    margin-top: 50px;
+}
+
+.dapp-font-blue {
+    font-size: 48px;
+    color: #38B9FC;
+}
+
+
+/* Seventh screen */
+
+.seventh-screen {
+    margin-top: 160px;
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-us {
+    width: 430px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    flex-wrap: nowrap;
+}
+
+.contact-us .text {
+    width: 342px;
+    margin-top: 5%;
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.form-logo {
+    margin-left: 60%;
+    margin-top: 5%;
+    width: 289px;
+    height: 285px;
+}
+
+.form {
+    width: 645px;
+    height: 430px;
+    margin-left: 80px;
+    border-radius: 16px;
+    background: #111730;
+    display: flex;
+    align-items: center;
+}
+
+.form-inputs input {
+    margin-top: 9px;
+    padding-left: 10px;
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.name {
+    width: 268px;
+    height: 55px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+.mail {
+    width: 268px;
+    height: 55px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+.telegram {
+    width: 540px;
+    height: 55px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+.project-info {
+    width: 540px;
+    height: 104px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 7.5%;
+}
+
+.submit-button {
+    margin-top: 32px;
+    display: inline-flex;
+    padding: 24px 58px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    border: none;
+    background: #38B9FC;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.submit-button:hover {
+    box-shadow: 0px 16px 19.3px 0px rgba(94, 129, 255, 0.23);
+}
+
+.att-file {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    margin-top: 5%;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    font-family: "Mazzard";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 38px;
+}
+
+.att-file:active {
+    background-color: none;
+}
+
+.attach-file {
+    margin-left: 5%;
+    margin-right: 3%;
+    width: 21px;
+    height: 22px;
+}
+
+
+/* Footer */
+
+.footer-line {
+    margin-top: 90px;
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+footer ul {
+    margin-top: 60px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    background: rgba(199, 225, 219, 0.11);
+      -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+.social-media img {
+    margin-top: 80%;
+    width: 200%;
+    height: 200%;
+}
+
+.social-media:hover {
+    box-shadow: 0px 16px 19.3px 0px rgba(94, 129, 255, 0.23);
+}
+
+.footer-wide-line {
+    margin-top: 80px;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.footer-wide-line span {
+    color: #FFF;
+    font-family: "Mazzard";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+}

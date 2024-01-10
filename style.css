@@ -2,17 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    z-index: 4;
 }
 
 .container {
     display: flex;
     justify-content: center;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .container-bg {
-    background-color: #141d3c;
-    /* background-image: url(./img/bg.svg); */
+    background-color: #151D3D;
     width: 100%;
     height: 100%;
 }
@@ -23,7 +25,7 @@ button {
 
 button:active {
     border-color: #111730;
-    background-color: #141d3c;
+    background-color: #151D3D;
 }
 
 .dapp-font {
@@ -39,6 +41,30 @@ button:active {
     background-clip: text;
 }
 
+.ellipse {
+    width: 914px;
+    height: 914px;
+    border-radius: 100%;
+    background: rgba(87, 134, 219, 0.58);
+    filter: blur(335px);
+    position: absolute;
+    z-index: 2;
+}
+
+.rectangle {
+    width: 120%;
+    height: 650px;
+    background: linear-gradient(260deg, rgba(0, 0, 0, 0.25) 3.23%, rgba(0, 0, 0, 0.00) 109.62%);
+    position: absolute;
+    z-index: 1;
+}
+
+.vector {
+    width: 3369px;
+    height: 424px;
+    position: absolute;
+    z-index: 2;
+}
 
  /*Header */
 .header {
@@ -159,6 +185,10 @@ button:active {
     margin-top: 165px;
 }
 
+.ellipse-1 {
+    right: 80%;
+}
+
 .f-text {
     display: flex;
     flex-direction: column;
@@ -226,6 +256,17 @@ button:active {
     justify-content: center;
     align-items: center;
     margin-top: 172px;
+    position: relative;
+}
+
+.rectangle-1 {
+    transform: rotate(-10deg);
+}
+
+.vector-1 {
+    position: absolute;
+    right: 14%;
+    bottom: 5%;
 }
 
 .safebox {
@@ -270,7 +311,7 @@ button:active {
     width: 700px;
     display: flex;
     justify-content: flex-start;
-    /* align-items: center; */
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -289,7 +330,7 @@ button:active {
 .lock {
     width: 511px;
     height: 511px;
-    margin-top: -250px;
+    margin-top: -240px;
     margin-left: 220px;
 }
 
@@ -302,6 +343,13 @@ button:active {
     align-items: center;
     justify-content: center;
     margin-top: 150px;
+    position: relative;
+}
+
+.vector-2 {
+    transform: rotate(180deg);
+    position: absolute;
+    left: 14%;
 }
 
 .container .cloud-lock {
@@ -345,6 +393,12 @@ button:active {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+}
+
+.rectangle-2 {
+    bottom: 30%;
+    transform: rotate(-170deg);
 }
 
 .fourth-screen h2 {
@@ -423,6 +477,14 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.vector-3 {
+    position: absolute;
+    left: 14%;
+    top: -20%;
+    transform: rotate(180deg);
 }
 
 .title {
@@ -444,6 +506,18 @@ button:active {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+}
+
+.rectangle-3 {
+    height: 550px;
+    transform: rotate(-10deg);
+}
+
+.vector-4 {
+    position: absolute;
+    right: 14%;
+    top: -30%;
 }
 
 .sixth-screen .p {
@@ -498,7 +572,8 @@ button:active {
 /* Seventh screen */
 
 .seventh-screen {
-    margin-top: 160px;
+    position: relative;
+    margin-top: 200px;
     margin-left: 160px;
     margin-right: 160px;
     display: flex;
@@ -508,9 +583,13 @@ button:active {
     text-align: center;
 }
 
+.ellipse-3 {
+    bottom: 5%;
+}
+
 .contact-us {
     width: 430px;
-    margin-right: 80px;
+    margin-right: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -538,7 +617,7 @@ button:active {
 .form {
     width: 645px;
     height: 430px;
-    margin-left: 80px;
+    margin-left: 60px;
     border-radius: 16px;
     background: #111730;
     display: flex;
@@ -633,7 +712,7 @@ button:active {
 }
 
 .att-file:active {
-    background-color: none;
+    background-color: transparent;
 }
 
 .attach-file {

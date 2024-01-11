@@ -52,7 +52,7 @@ button:active {
 }
 
 .rectangle {
-    width: 120%;
+    width: 150%;
     height: 650px;
     background: linear-gradient(260deg, rgba(0, 0, 0, 0.25) 3.23%, rgba(0, 0, 0, 0.00) 109.62%);
     position: absolute;
@@ -206,7 +206,7 @@ button:active {
     margin-top: 22px;
     color: #FFF;
     font-family: "Mazzard";
-    font-size: 40px;
+    font-size: 34px;
     font-style: normal;
     font-weight: 400;
 }
@@ -277,7 +277,7 @@ button:active {
     flex-wrap: nowrap;
 }
 
-.container .safebox-img {
+.safebox-img {
     width: 306px;
     height: 306px;
     object-fit: cover;
@@ -352,7 +352,7 @@ button:active {
     left: 14%;
 }
 
-.container .cloud-lock {
+.cloud-lock {
     width: 287px;
     height: 287px;
     object-fit: cover;
@@ -763,7 +763,7 @@ footer ul {
     margin-top: 80px;
     width: 100%;
     height: 48px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     background: rgba(255, 255, 255, 0.08);
     text-align: center;
 }
@@ -775,4 +775,694 @@ footer ul {
     font-style: normal;
     font-weight: 500;
     line-height: 48px;
+}
+
+
+
+/* Adaptive */
+
+@media screen and (max-width: 600px) { 
+    .ellipse {
+        width: 914px;
+        height: 914px;
+        border-radius: 100%;
+        background: rgba(87, 134, 219, 0.58);
+        filter: blur(335px);
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ellipse-1 {
+        top: -200px;
+    }
+    
+    .rectangle {
+        height: 320px;
+        background: linear-gradient(260deg, rgba(0, 0, 0, 0.25) 3.23%, rgba(0, 0, 0, 0.00) 109.62%);
+        position: absolute;
+        z-index: 1;
+    }
+
+    .rectangle-1 {
+        height: 280px;
+        top: 50px;
+    }
+    
+    .vector {
+        display: none;
+        width: 3369px;
+        height: 424px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    header ul li {
+        display: none;
+    }
+
+    
+    .first-screen {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        margin-top: -10%;
+    }
+
+    .f-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first-screen .dapp-font {
+        font-size: 43px;
+    }
+
+    .text-title {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .first-screen-button {
+        margin-top: 21px;
+        padding: 9px 29px;
+        font-size: 12px;
+    }
+
+    .ransomware {
+        width: 300px;
+        height: 300px;
+    }
+
+
+
+    .second-screen {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .safebox-img {
+        margin-bottom: 12%;
+        width: 140px;
+        height: 140px;
+    }
+
+    .desc {
+        width: 310px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .dapp-text {
+        font-size: 24px;
+    }
+
+    .vertical-line {
+        width: 100%;
+        height: 1px;
+    }
+
+    .numbers {
+        width: 500px;
+        justify-content: center;
+        margin-right: 45px;
+    }
+
+    .text-1 {
+        margin-top: 0;
+        margin-left: 15px;
+        width: 80px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .lock {
+        display: none;
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+
+
+    .third-screen {
+        margin-top: 70px;
+    }
+
+    .cloud-lock {
+        width: 140px;
+        height: 140px;
+    }
+
+    .why {
+        width: 90%;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .p {
+        margin-top: 12px;
+        width: 95%;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+
+    .fourth-screen {
+        margin-top: 100px;
+    }
+
+    .fourth-screen h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .fourth-screen .dapp-font {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .benefits-desc {
+        width: 80%;
+    }
+
+    .benefits-desc img { 
+        margin-top: 30px;
+        width: 54px;
+        height: 54px;
+    }
+
+    .benefits-title {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .benefits-description {
+        font-size: 10px;
+        line-height: 19px;
+    }
+
+    .contact-button {
+        margin-top: 25px;
+        padding: 16px 40px;
+    }
+
+
+    .fifth-screen {
+        margin-top: 100px;
+    }
+
+    .how-works {
+        width: 90%;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+
+    .sixth-screen {
+        margin-top: 70px;
+    }
+
+    .sixth-screen .p {
+        margin-top: 5px;
+        font-size: 16px
+    }
+
+    .clients-blocks {
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .client {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 120px;
+        height: 80px;
+        margin-top: -10px;
+    }
+
+    .client img {
+        margin-top: 1%;
+        width: 40px;
+        height: 38px;
+    }
+
+    .client .text {
+        font-size: 18px;
+        margin-top: 5%;
+    }
+
+    .sixth-screen .title {
+        margin-top: 0px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .dapp-font-blue {
+        font-size: 30px;
+    }
+
+
+
+    .seventh-screen {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+
+    .ellipse-3 {
+        top: -100%;
+    }
+
+    .contact-us {
+        margin-right: 0px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-us .text {
+        width: 280px;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .form-logo {
+        /* display: none; */
+        margin-top: -30%;
+        margin-right: 150%;
+        width: 140px;
+        height: 140px;
+        z-index: 2;
+    }
+
+    .form {
+        margin-left: 0;
+        border-radius: 8px;
+        width: 320px;
+        height: 100%;
+    }
+
+    .form-inputs input {
+        font-size: 8px;
+        border-radius: 4px;
+    }
+
+    .name,
+    .mail {
+        width: 133px;
+        height: 27px;
+    }
+
+    .telegram {
+        width: 270px;
+        height: 27px;
+    }
+
+    .project-info {
+        width: 270px;
+        height: 70px;
+    }
+
+    .submit-button {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        padding: 12px 29px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+    .att-file {
+        margin-top: 0;
+        font-size: 8px;
+    }
+
+    .attach-file {
+        width: 10px;
+        height: 11px;
+    }
+
+
+    .footer-line {
+        display: none;
+    }
+
+    footer ul li{
+        display: none;
+    }
+
+    .footer-wide-line {
+        margin-top: -15%;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+    .ellipse {
+        width: 914px;
+        height: 914px;
+        border-radius: 100%;
+        background: rgba(87, 134, 219, 0.58);
+        filter: blur(335px);
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ellipse-1 {
+        top: -200px;
+    }
+    
+    .rectangle {
+        height: 380px;
+        background: linear-gradient(260deg, rgba(0, 0, 0, 0.25) 3.23%, rgba(0, 0, 0, 0.00) 109.62%);
+        position: absolute;
+        z-index: 1;
+    }
+
+    .rectangle-1 {
+        top: 50px;
+    }
+    
+    .vector {
+        display: none;
+        width: 3369px;
+        height: 424px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    header ul li {
+        display: none;
+    }
+
+    
+    .first-screen {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        margin-top: -10%;
+    }
+
+    .f-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first-screen .dapp-font {
+        font-size: 64px;
+    }
+
+    .text-title {
+        font-size: 30px;
+    }
+
+    .text {
+        font-size: 24px;
+        width: 60%;
+    }
+
+    .first-screen-button {
+        margin-top: 28px;
+        padding: 14px 40px;
+        font-size: 18px;
+    }
+
+    .ransomware {
+        width: 300px;
+        height: 300px;
+    }
+
+
+
+    .second-screen {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .safebox-img {
+        margin-bottom: 12%;
+        width: 200px;
+        height: 200px;
+    }
+
+    .desc {
+        width: 450px;
+        font-size: 36px;
+        line-height: 35px;
+    }
+
+    .dapp-text {
+        font-size: 36px;
+    }
+
+    .vertical-line {
+        margin: 2% 0 2% 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    .numbers {
+        width: 700px;
+        justify-content: center;
+        margin-right: 76px;
+    }
+
+    .text-1 {
+        margin-top: 0;
+        margin-left: 24px;
+        width: 110px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .lock {
+        display: none;
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+
+
+    .third-screen {
+        margin-top: 110px;
+    }
+
+    .cloud-lock {
+        width: 200px;
+        height: 200px;
+    }
+
+    .why {
+        width: 80%;
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .p {
+        margin-top: 12px;
+        width: 85%;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+
+    .fourth-screen {
+        margin-top: 100px;
+    }
+
+    .fourth-screen h2 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    .fourth-screen .dapp-font {
+        font-size: 45px;
+        line-height: 30px;
+    }
+
+    .benefits-desc {
+        width: 70%;
+    }
+
+    .benefits-desc img { 
+        margin-top: 30px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .benefits-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .benefits-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .contact-button {
+        margin-top: 25px;
+        padding: 24px 60px;
+        font-size: 24px;
+    }
+
+
+    .fifth-screen {
+        margin-top: 100px;
+    }
+
+    .how-works {
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+
+    .sixth-screen {
+        margin-top: 70px;
+    }
+
+    .sixth-screen .p {
+        margin-top: 10px;
+        font-size: 24px
+    }
+
+    .clients-blocks {
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .client {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 150px;
+        height: 100px;
+        margin-top: -10px;
+    }
+
+    .client img {
+        margin-top: 1%;
+        width: 50px;
+        height: 48px;
+    }
+
+    .client .text {
+        font-size: 22px;
+        margin-top: 5%;
+    }
+
+    .sixth-screen .title {
+        margin-top: 0px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .dapp-font-blue {
+        font-size: 40px;
+    }
+
+
+    .seventh-screen {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+
+    .ellipse-3 {
+        bottom: -50%;
+    }
+
+    .contact-us {
+        margin-right: 0px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-us .text {
+        width: 320px;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .form-logo {
+        /* display: none; */
+        margin-top: -20%;
+        margin-right: 170%;
+        width: 200px;
+        height: 200px;
+        z-index: 2;
+    }
+
+    .form {
+        margin-top: -15%;
+        margin-left: 0;
+        border-radius: 12px;
+        width: 460px;
+        height: 100%;
+    }
+
+    .form-inputs input {
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .name,
+    .mail {
+        width: 198px;
+        height: 40px;
+    }
+
+    .telegram {
+        width: 400px;
+        height: 40px;
+    }
+
+    .project-info {
+        width: 400px;
+        height: 100px;
+    }
+
+    .submit-button {
+        margin: 18px 0 18px 0;
+        margin-left: -5px;
+        padding: 18px 40px;
+        border-radius: 14px;
+        font-size: 14px;
+    }
+
+    .att-file {
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .attach-file {
+        width: 16px;
+        height: 17px;
+    }
+
+
+    .footer-line {
+        display: none;
+    }
+
+    footer ul li{
+        display: none;
+    }
+
+    .footer-wide-line {
+        margin-top: -10%;
+    }
 }

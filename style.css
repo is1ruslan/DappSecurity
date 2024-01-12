@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Mazzard-MMedium';
+    src: local('Mazzard Medium'), local('Mazzard-MMedium'),
+    url('./fonts/MazzardM-Medium.woff2') format('woff2'),
+         url('./fonts/MazzardM-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mazzard-MSemiBold';
+    src: local('Mazzard SemiBold'), local('Mazzard-MSemiBold'),
+    url('./fonts/MazzardM-SemiBold.woff2') format('woff2'),
+         url('./fonts/MazzardM-SemiBold.woff') format('woff')d};
+
+@font-face {
+    font-family: 'Mazzard-MLight';
+    src: local('Mazzard Light'), local('Mazzard-MLight'),
+    url('./fonts/MazzardM-Light.woff2') format('woff2'),
+         url('./fonts/MazzardM-Light.woff') format('woff');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,7 +50,7 @@ button:active {
 
 .dapp-font {
     font-family: "Mazzard-MSemiBold", Helvetica;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 600;
     color: transparent;
     line-height: 67px;
@@ -121,17 +141,18 @@ button:active {
     font-family: "Mazzard-MMedium", Helvetica;
     font-weight: 500;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 38px;
     white-space: nowrap;
     margin-right: 43px;
 }
 
-.header-item:after {
+.header-item:hover:after {
+    content: '';
     display: block;
-    width: 20px;
-    height: 4px;
-    color: #4A9BE8;
+    width: 100%;
+    height: 2px;
+    background-color: #4A9BE8;
 }
 
 .header-button {
@@ -148,7 +169,7 @@ button:active {
     overflow: hidden;
     border: 1px solid;
     border-color: #38b9fc;
-    font-family: "Mazzard-MMedium", Helvetica;
+    font-family: "Mazzard-MLight", Helvetica;
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
@@ -175,6 +196,141 @@ button:active {
     color: #ffffff;
     font-size: 14px;
 }
+
+
+/* Burger menu */
+
+.menu {
+    display: none;
+    z-index: 5;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+}
+
+.menu-list span {
+    font-size: 24px;
+}
+
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.burger {
+    position: relative;
+    z-index: 6;
+    left: 88%;
+    margin-top: -5%;
+    /* bottom: 90%; for fixed position if need */ 
+    cursor: pointer;
+    display: block;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    right: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: white;
+}
+
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 white;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+}
+
+.menu-list {
+    z-index: 5;
+    top: -27%;
+    right: 0;
+    position: absolute;
+    display: grid;
+    gap: 12px;
+    padding: 42px 0;
+    margin: 0;
+    background: #141d3c;
+    list-style-type: none;
+    transform: translateX(100%);
+    transition: .3s;
+    width: 200px;
+    height: 130vh;
+}
+
+.menu-item {
+    display: block;
+    padding: 8px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,.2)
+}
+
+.burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+}
+
+.menu-list .header-button {
+    margin-left: 0;
+    width: 170px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.menu ul li select {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #38b9fc;
+    background-color: transparent;
+    font-family: "Mazzard-MMedium", Helvetica;
+    font-weight: 500;
+    background: #141d3c;
+    color: #ffffff;
+    font-size: 12px;
+}
   
 
 /* First screen */
@@ -182,7 +338,7 @@ button:active {
 .first-screen {
     display: flex;
     justify-content: center;
-    margin-top: 165px;
+    margin-top: 100px;
 }
 
 .ellipse-1 {
@@ -205,7 +361,7 @@ button:active {
 .text-title {
     margin-top: 22px;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MSemiBold";
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
@@ -215,7 +371,7 @@ button:active {
     width: 640px;
     margin-top: 22px;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MLight";
     font-size: 32px;
     font-style: normal;
     font-weight: 300;
@@ -231,7 +387,7 @@ button:active {
     border-radius: 16px;
     background: #38B9FC;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MMedium";
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -287,7 +443,7 @@ button:active {
 .desc {
     width: 630px;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MMedium";
     font-size: 48px;
     font-style: normal;
     font-weight: 300;
@@ -318,7 +474,7 @@ button:active {
 .text-1 {
     width: 205px;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MMedium";
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -330,7 +486,7 @@ button:active {
 .lock {
     width: 511px;
     height: 511px;
-    margin-top: -240px;
+    margin-top: -269px;
     margin-left: 220px;
 }
 
@@ -410,7 +566,7 @@ button:active {
 }
 
 .fourth-screen .dapp-font {
-    font-size: 48px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 600;
     line-height: 60px;
@@ -437,7 +593,7 @@ button:active {
 .benefits-title {
     color: #FFF;
     text-align: center;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MSemiBold";
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -447,7 +603,7 @@ button:active {
 .benefits-description {
     margin-top: -50px;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MLight";
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -489,12 +645,16 @@ button:active {
 
 .title {
     color: white;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MSemiBold";
     font-size: 48px;
     font-weight: 600;
     line-height: 60px;
     text-align: center;
 
+}
+
+.how-works-2 {
+    display: none;
 }
 
 
@@ -552,7 +712,7 @@ button:active {
 
 .client .text {
     color: #FFF;
-    font-family: "Inter";
+    font-family: "Mazzard-MLight";
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -589,7 +749,7 @@ button:active {
 
 .contact-us {
     width: 430px;
-    margin-right: 60px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -608,7 +768,7 @@ button:active {
 }
 
 .form-logo {
-    margin-left: 60%;
+    margin-left: 50%;
     margin-top: 5%;
     width: 289px;
     height: 285px;
@@ -628,7 +788,7 @@ button:active {
     margin-top: 9px;
     padding-left: 10px;
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MLight";
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -670,7 +830,7 @@ button:active {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 7.5%;
+    margin-left: 8%;
 }
 
 .submit-button {
@@ -704,7 +864,7 @@ button:active {
     border: none;
     color: white;
     text-decoration: underline;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MMedium";
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -734,7 +894,7 @@ button:active {
 }
 
 footer ul {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .social-media {
@@ -770,7 +930,7 @@ footer ul {
 
 .footer-wide-line span {
     color: #FFF;
-    font-family: "Mazzard";
+    font-family: "Mazzard-MMedium";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -816,8 +976,14 @@ footer ul {
         z-index: 2;
     }
 
+    /* Burger menu */
+
     header ul li {
         display: none;
+    }
+
+    .menu {
+        display: block;
     }
 
     
@@ -826,7 +992,7 @@ footer ul {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
-        margin-top: -10%;
+        margin-top: -20%;
     }
 
     .f-text {
@@ -922,14 +1088,14 @@ footer ul {
     .why {
         width: 90%;
         font-size: 24px;
-        line-height: 36px;
+        line-height: 30px;
     }
 
     .p {
         margin-top: 12px;
         width: 95%;
         font-size: 14px;
-        line-height: 19px;
+        line-height: 20px;
     }
 
 
@@ -943,7 +1109,7 @@ footer ul {
     }
 
     .fourth-screen .dapp-font {
-        font-size: 30px;
+        font-size: 36px;
         line-height: 30px;
     }
 
@@ -978,8 +1144,12 @@ footer ul {
     }
 
     .how-works {
+        display: none;
+    }
+
+    .how-works-2 {
+        display: block;
         width: 90%;
-        height: 100%;
     }
 
     .title {
@@ -993,7 +1163,8 @@ footer ul {
 
     .sixth-screen .p {
         margin-top: 5px;
-        font-size: 16px
+        font-size: 16px;
+        line-height: 30px;
     }
 
     .clients-blocks {
@@ -1023,7 +1194,7 @@ footer ul {
     .sixth-screen .title {
         margin-top: 0px;
         font-size: 30px;
-        line-height: 30px;
+        line-height: 36px;
     }
 
     .dapp-font-blue {
@@ -1071,7 +1242,7 @@ footer ul {
     }
 
     .form-inputs input {
-        font-size: 8px;
+        font-size: 10px;
         border-radius: 4px;
     }
 
@@ -1147,7 +1318,7 @@ footer ul {
     }
 
     .rectangle-1 {
-        top: 50px;
+        top: 100px;
     }
     
     .vector {
@@ -1158,11 +1329,65 @@ footer ul {
         z-index: 2;
     }
 
+
+
+    /* Burger menu */
+
     header ul li {
         display: none;
     }
 
+    .menu {
+        display: block;
+    }
+
+    .burger {
+        width: 60px;
+        height: 35px;
+    }
+
+    .burger::before {
+        top: 25%;
+    }
     
+    .burger-checkbox:checked + .burger::before {
+        top: 15px;
+    }
+    
+    .burger-checkbox:checked + .burger::after {
+        bottom: 15px;
+    }
+
+    .menu-list {
+        top: -30%;
+        width: 300px;
+    }
+
+    .menu-item {
+        font-size: 26px;
+    }
+
+    .menu-list .header-logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .menu-list span {
+        font-size: 36px;
+    }
+
+    .menu-list .header-button {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .menu ul li select {
+        width: 70px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+
     .first-screen {
         display: flex;
         flex-direction: column-reverse;
@@ -1269,10 +1494,10 @@ footer ul {
     }
 
     .p {
-        margin-top: 12px;
+        margin-top: 16px;
         width: 85%;
         font-size: 20px;
-        line-height: 24px;
+        line-height: 28px;
     }
 
 
@@ -1322,6 +1547,11 @@ footer ul {
     }
 
     .how-works {
+        display: none;
+    }
+
+    .how-works-2 {
+        display: block;
         margin-top: 30px;
         width: 90%;
     }

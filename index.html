@@ -47,7 +47,7 @@
                     <li class="header-btn"><a href="#contacts"><button type="button" class="header-button">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ АУДИТА</button></a></li>
                     <li>
                         <div class="header-btn">
-                            <select name="language" id="languages">
+                            <select name="language" id="languages-mobile">
                                 <option value="ru" selected>Рус</option>
                                 <option value="en">Eng</option>
                             </select>
@@ -223,20 +223,22 @@
                 </div>
                 
 
-                <form class="form">
+                <form class="form" action="http://localhost:5000/submit-form" method="post" enctype="multipart/form-data">
                     <div class="form-inputs">
-                        <input class="name" placeholder="Ваше имя" required>
-                        <input class="mail" type="email" placeholder="Ваша почта" required>
-                        <input class="telegram" placeholder="Телеграм" required>
-                        <input class="project-info" placeholder="Описание проекта">
+                        <input class="name" name="username" placeholder="Ваше имя" required>
+                        <input class="mail" name="mail" type="email" placeholder="Ваша почта" required>
+                        <input class="telegram" name="tg" placeholder="Телеграм" required>
+                        <input class="project-info" name="projectInfo" placeholder="Описание проекта">
 
                         <div class="form-buttons">
                             <button class="submit-button" type="submit">Отправить</button>
-                        
-                            <button class="att-file" type="button">
+                            
+                            <input class="file-input" id="file-input" name="attach" type="file" />
+
+                            <label for="file-input" class="att-file">
                                 <img class="attach-file" src="./img/attach-file-1.svg" alt="attch"/>
                                 <div class="attach">Прикрепить файл</div>
-                            </button>
+                            </label>
                         </div>
                     </div>
                 </form>
@@ -284,5 +286,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

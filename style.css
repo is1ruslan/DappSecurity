@@ -794,6 +794,10 @@ button:active {
     font-weight: 300;
 }
 
+.form-buttons input {
+    display: none;
+}
+
 .name {
     width: 268px;
     height: 55px;

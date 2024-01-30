@@ -136,6 +136,7 @@ button:active {
 .header a {
     color: white;
     text-decoration: none;
+    transition: color 0.5s ease;
 }
 
 .header ul li{
@@ -148,12 +149,23 @@ button:active {
     margin-right: 43px;
 }
 
-.header-item:hover:after {
+.header a:hover {
+    color: #4A9BE8;
+}
+
+.header-item:after {
     content: '';
     display: block;
     width: 100%;
     height: 2px;
     background-color: #4A9BE8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.header-item:hover:after {
+    transform: scaleX(1);
 }
 
 .header-button {
@@ -259,6 +271,10 @@ button:active {
 .burger::after {
     bottom: 0;
     transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked + .burger{
+    position: fixed;
 }
 
 .burger-checkbox:checked + .burger::before {
@@ -422,7 +438,7 @@ button:active {
 
 .vector-1 {
     position: absolute;
-    right: 14%;
+    transform: translateX(-52vw);
     bottom: 5%;
 }
 
@@ -431,7 +447,7 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; 
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .safebox-img {
@@ -504,9 +520,8 @@ button:active {
 }
 
 .vector-2 {
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateX(-52vw);
     position: absolute;
-    left: 14%;
 }
 
 .cloud-lock {
@@ -618,6 +633,7 @@ button:active {
     background-color: #38b9fc;
     border-radius: 16px;
     overflow: hidden;
+    font-size: 20px;
     color: white;
 }
 
@@ -639,9 +655,8 @@ button:active {
 
 .vector-3 {
     position: absolute;
-    left: 14%;
     top: -20%;
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateX(-52vw);
 }
 
 .title {
@@ -658,11 +673,36 @@ button:active {
     display: none;
 }
 
+.how-works-texts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1400px;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 80px;
+}
+
+.how-works-text {
+    margin-top: 172px;
+    margin-right: 30px;
+    color: white;
+    font-family: "Mazzard-MLight";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    width: 278px;
+    line-height: 31px;
+}
+
+.text-up {
+    margin-top: 140px;
+}
+
 
 /* Sixth screen  */
 
 .sixth-screen {
-    margin-top: 74px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -677,7 +717,7 @@ button:active {
 
 .vector-4 {
     position: absolute;
-    right: 14%;
+    transform: translateX(-52vw);
     top: -30%;
 }
 
@@ -975,11 +1015,22 @@ footer ul {
     }
     
     .vector {
-        display: none;
-        width: 3369px;
-        height: 424px;
+        width: 1000px;
+        height: 150px;
         position: absolute;
         z-index: 2;
+    }
+
+    .vector-1 {
+        margin-bottom: -100px;
+    }
+
+    .vector-2 {
+        margin-bottom: -400px;
+    }
+
+    .vector-3 {
+        margin-top: -50px;
     }
 
     /* Burger menu */
@@ -1158,6 +1209,10 @@ footer ul {
         width: 90%;
     }
 
+    .how-works-texts {
+        display: none;
+    }
+
     .title {
         font-size: 30px;
     }
@@ -1199,12 +1254,12 @@ footer ul {
 
     .sixth-screen .title {
         margin-top: 0px;
-        font-size: 30px;
+        font-size: 28px;
         line-height: 36px;
     }
 
     .dapp-font-blue {
-        font-size: 30px;
+        font-size: 28px;
     }
 
 
@@ -1301,7 +1356,7 @@ footer ul {
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1280px) {
+@media screen and (min-width: 600px) and (max-width: 960px) {
     .ellipse {
         width: 914px;
         height: 914px;
@@ -1328,11 +1383,22 @@ footer ul {
     }
     
     .vector {
-        display: none;
-        width: 3369px;
-        height: 424px;
+        width: 2000px;
+        height: 300px;
         position: absolute;
         z-index: 2;
+    }
+
+    .vector-1 {
+        margin-bottom: -200px;
+    }
+
+    .vector-2 {
+        margin-bottom: -500px;
+    }
+
+    .vector-3 {
+        margin-top: -50px;
     }
 
 
@@ -1549,11 +1615,13 @@ footer ul {
 
 
     .fifth-screen {
-        margin-top: 100px;
+        margin-top: 150px;
     }
 
     .how-works {
         display: none;
+        width: 750px;
+        height: 700px;
     }
 
     .how-works-2 {
@@ -1566,9 +1634,29 @@ footer ul {
         font-size: 40px;
     }
 
+    .how-works-texts {
+        display: none;
+        width: 730px;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .how-works-text {
+        margin-top: 100px;
+        margin-right: 30px;
+        font-size: 12px;
+        width: 140px;
+        line-height: 31px;
+    }
+
+    .text-up {
+        margin-top: 140px;
+    }
+
+
 
     .sixth-screen {
-        margin-top: 70px;
+        margin-top: 110px;
     }
 
     .sixth-screen .p {
@@ -1700,5 +1788,231 @@ footer ul {
 
     .footer-wide-line {
         margin-top: -10%;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+    .header-logo {
+        width: 56px;
+        height: 56px;
+    }
+   
+    .header ul li{
+        font-size: 14px;
+        margin-right: 32px;
+    }
+
+    .header span {
+        font-size: 18px;
+    }
+
+    .header-button {
+        margin-left: 5%;
+        font-size: 12px;
+        width: 260px;
+        height: 40px;
+    }
+
+    .header ul li select {
+        width: 50px;
+        height: 36px;
+    }
+
+    .vector {
+        width: 2000px;
+        height: 300px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .first-screen .dapp-font {
+        font-size: 64px;
+    }
+    
+    .text-title {
+        font-size: 26px;
+    }
+    
+    .text {
+        width: 480px;
+        font-size: 24px;
+    }
+
+    .first-screen-button {
+        font-size: 16px;
+    }
+
+
+    .desc {
+        width: 500px;
+        font-size: 36px;
+    }
+    
+    .dapp-text {
+        font-size: 36px;
+    }
+
+    .text-1 {
+        font-size: 18px;
+    }
+
+    .numbers {
+        width: 550px;
+    }
+
+    .vector-1 {
+        margin-bottom: -100px;
+    }
+
+    .lock {
+        margin-top: -245px;
+    }
+
+
+    .cloud-lock {
+        width: 200px;
+        height: 200px;
+    }
+
+    .why {
+        font-size: 40px;
+    }
+
+    .p {
+        width: 800px;
+        font-size: 18px;
+    }
+
+
+
+    .fourth-screen h2 {
+        font-size: 40px;
+    }
+
+    .fourth-screen .dapp-font {
+        font-size: 48px;
+    }
+
+    .benefits-desc {
+        width: 300px;
+    }
+
+    .benefits-title {
+        font-size: 30px;
+    }
+
+    .benefits-description {
+        font-size: 16px;
+    }
+
+    .contact-button {
+        font-size: 16px;
+    }
+
+
+
+    .how-works {
+        width: 1000px;
+        height: 700px;
+    }
+
+    .how-works-texts {
+        width: 1000px;
+        margin-left: 75px;
+        margin-top: 110px;
+    }
+
+    .how-works-text {
+        margin-top: 130px;
+        margin-right: 45px;
+        font-size: 16px;
+        width: 200px;
+    }
+    
+    .text-up {
+        margin-top: 90px;
+    }
+
+
+
+    .client {
+        width: 210px;
+        height: 100px;
+    }
+
+    .client img {
+        width: 50px;
+        height: 46px;
+    }
+
+    .client-text {
+        font-size: 20px;
+    }
+
+    .dapp-font-blue {
+        font-size: 40px;
+    }
+
+
+
+    .contact-us .text {
+        font-size: 20px;
+    }
+
+    .form-logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .form {
+        border-radius: 12px;
+        width: 460px;
+        height: 100%;
+    }
+
+    .form-inputs input {
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .name,
+    .mail {
+        width: 198px;
+        height: 40px;
+    }
+
+    .telegram {
+        width: 400px;
+        height: 40px;
+    }
+
+    .project-info {
+        width: 400px;
+        height: 100px;
+    }
+
+    .submit-button {
+        margin: 18px 0 18px 0;
+        margin-left: -5px;
+        padding: 18px 40px;
+        border-radius: 14px;
+        font-size: 14px;
+    }
+
+    .att-file {
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .attach-file {
+        width: 16px;
+        height: 17px;
+    }
+
+    .social-media {
+        width: 36px;
+        height: 36px;
     }
 }

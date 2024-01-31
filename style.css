@@ -747,8 +747,18 @@ button:active {
 }
 
 .client img {
-    width: 62px;
-    height: 56px;
+    width: 80px;
+    height: 74px;
+}
+
+.client-2 img {
+    width: 110px;
+    height: 60px;
+}
+
+.client-4 img {
+    width: 70px;
+    height: 70px;
 }
 
 .client .text {
@@ -1243,12 +1253,22 @@ footer ul {
 
     .client img {
         margin-top: 1%;
+        width: 44px;
+        height: 42px;
+    }
+    
+    .client-2 img {
+        width: 60px;
+        height: 40px;
+    }
+
+    .client-4 img {
         width: 40px;
-        height: 38px;
+        height: 40px;
     }
 
     .client .text {
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 5%;
     }
 
@@ -1679,12 +1699,22 @@ footer ul {
 
     .client img {
         margin-top: 1%;
+        width: 52px;
+        height: 50px;
+    }
+
+    .client-2 img {
+        width: 80px;
+        height: 50px;
+    }
+
+    .client-4 img {
         width: 50px;
-        height: 48px;
+        height: 50px;
     }
 
     .client .text {
-        font-size: 22px;
+        font-size: 18px;
         margin-top: 5%;
     }
 
@@ -1947,8 +1977,18 @@ footer ul {
         height: 46px;
     }
 
-    .client-text {
-        font-size: 20px;
+    .client-2 img {
+        width: 80px;
+        height: 45px;
+    }
+    
+    .client-4 img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .client .text {
+        font-size: 18px;
     }
 
     .dapp-font-blue {

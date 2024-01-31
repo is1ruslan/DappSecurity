@@ -13,6 +13,7 @@
 
 # production
 /build
+/js/config.js
 /server/config.js
 /server/data.env
 

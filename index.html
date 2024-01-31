@@ -173,8 +173,8 @@
             <div class="fifth-screen" id="how-works">
                 <img class="vector vector-3" src="./img/vector.svg"/>
                 <h2 class="title">Как Мы Работаем</h2>
-                <img class="how-works" src="./img/how-works.svg"/>
-                <img class="how-works-2" src="./img/how-works-2.svg"/>
+                <img class="how-works" src="./img/how-works.svg" loading="eager"/>
+                <img class="how-works-2" src="./img/how-works-2.svg" loading="eager"/>
 
                 <div class="how-works-texts">
                     <span class="how-works-text">Глубокая мануальная Проверка <strong>Смарт-Контракта</strong></span>
@@ -200,24 +200,24 @@
                 <h3 class="p">Ваша безопасность - Наша работа</h3>
 
                 <div class="clients-blocks">
-                    <div class="client">
+                    <div class="client client-1">
+                        <img src="./img/meta-forcel.svg" alt="logo"/>
+                        <div class="text">Meta Force</div>
+                    </div>
+
+                    <div class="client client-2">
+                        <img src="./img/magnet.png" alt="logo"/>
+                        <div class="text">Magnet</div>
+                    </div>
+
+                    <div class="client client-3">
                         <img src="./img/cd-logo.svg" alt="logo"/>
                         <div class="text">CryptoDo</div>
                     </div>
 
-                    <div class="client">
-                        <img src="./img/cd-logo.svg" alt="logo"/>
-                        <div class="text">CryptoDo</div>
-                    </div>
-
-                    <div class="client">
-                        <img src="./img/cd-logo.svg" alt="logo"/>
-                        <div class="text">CryptoDo</div>
-                    </div>
-
-                    <div class="client">
-                        <img src="./img/cd-logo.svg" alt="logo"/>
-                        <div class="text">CryptoDo</div>
+                    <div class="client clinet-4">
+                        <img src="./img/argos.png" alt="logo"/>
+                        <div class="text">Argos</div>
                     </div>
                 </div>
 
@@ -236,7 +236,7 @@
                 </div>
                 
 
-                <form class="form" action="http://localhost:5000/submit-form" method="post" enctype="multipart/form-data">
+                <form class="form" method="post" enctype="multipart/form-data">
                     <div class="form-inputs">
                         <input class="name" name="username" placeholder="Ваше имя" required>
                         <input class="mail" name="mail" type="email" placeholder="Ваша почта" required>
@@ -301,6 +301,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>

@@ -18,6 +18,20 @@
          url('./fonts/MazzardM-Light.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'MazzardL-ExtraLight';
+    src: local('Mazzard ExtraLight'), local('MazzardL-ExtraLight'),
+    url('./fonts/MazzardL-ExtraLight.woff') format('woff2'),
+         url('./fonts/MazzardL-ExtraLight.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'MazzardL-Thin';
+    src: local('Mazzard Thin'), local('MazzardL-Thin'),
+    url('./fonts/MazzardL-Thin.woff') format('woff2'),
+         url('./fonts/MazzardL-Thin.woff2') format('woff');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -47,6 +61,11 @@ button {
 button:active {
     border-color: #111730;
     background-color: #151D3D;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 .dapp-font {
@@ -353,6 +372,7 @@ button:active {
 /* First screen */
 
 .first-screen {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 100px;
@@ -591,7 +611,7 @@ button:active {
 .benefits-row {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
 }
@@ -686,12 +706,15 @@ button:active {
     margin-top: 172px;
     margin-right: 30px;
     color: white;
-    font-family: "Mazzard-MLight";
+    font-family: "MazzardL-ExtraLight";
     font-size: 20px;
-    font-style: normal;
     font-weight: 300;
     width: 278px;
     line-height: 31px;
+}
+
+.how-works-text storng {
+    font-weight: 700;
 }
 
 .text-up {
@@ -702,7 +725,7 @@ button:active {
 /* Sixth screen  */
 
 .sixth-screen {
-    margin-top: 150px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1197,7 +1220,7 @@ footer ul {
 
     .benefits-description {
         font-size: 10px;
-        line-height: 19px;
+        line-height: 16px;
     }
 
     .contact-button {
@@ -1821,7 +1844,7 @@ footer ul {
     }
 }
 
-@media screen and (min-width: 960px) and (max-width: 1280px) {
+@media screen and (min-width: 960px) and (max-width: 1380px) {
     .header-logo {
         width: 56px;
         height: 56px;
@@ -1829,7 +1852,7 @@ footer ul {
    
     .header ul li{
         font-size: 14px;
-        margin-right: 32px;
+        margin-right: 26px;
     }
 
     .header span {
@@ -1840,7 +1863,7 @@ footer ul {
         margin-left: 5%;
         font-size: 12px;
         width: 260px;
-        height: 40px;
+        height: 60px;
     }
 
     .header ul li select {
@@ -1874,22 +1897,38 @@ footer ul {
         font-size: 16px;
     }
 
+    .ransomware {
+        width: 400px;
+        height: 400px;
+    }
+
+
+    .second-screen {
+        margin-top: 100px;
+    }
+
+    .safebox-img {
+        width: 260px;
+        height: 260px;
+    }
 
     .desc {
-        width: 500px;
-        font-size: 36px;
+        width: 400px;
+        max-width: 500px;
+        font-size: 32px;
     }
     
     .dapp-text {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .text-1 {
-        font-size: 18px;
+        width: 150px;
+        font-size: 20px;
     }
 
     .numbers {
-        width: 550px;
+        width: 450px;
     }
 
     .vector-1 {
@@ -1897,9 +1936,13 @@ footer ul {
     }
 
     .lock {
-        margin-top: -245px;
+        margin-top: -274px;
     }
 
+
+    .third-screen {
+        margin-top: 60px;
+    }
 
     .cloud-lock {
         width: 200px;
@@ -1934,7 +1977,8 @@ footer ul {
     }
 
     .benefits-description {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 24px;
     }
 
     .contact-button {
@@ -1946,12 +1990,13 @@ footer ul {
     .how-works {
         width: 1000px;
         height: 700px;
+        margin-top: -100px;
     }
 
     .how-works-texts {
         width: 1000px;
         margin-left: 75px;
-        margin-top: 110px;
+        margin-top: -30px;
     }
 
     .how-works-text {

@@ -1,7 +1,55 @@
 import config from './config.js';
+import lang from './lang.js';
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.form');
+    const select = document.querySelectorAll('select');
+    const languages = ['en', 'ru'];
+
+    select.forEach(select => select.addEventListener('change', function() {
+        const lang = select.value;
+        location.href = window.location.pathname + '#' + lang;
+        location.reload();
+    }));
+
+    function changeLanguage() {
+        const hash = window.location.hash.substr(1);
+        
+        if (!languages.includes(hash)) {
+            location.href = window.location.pathname + '#ru';
+            location.reload();
+        };
+
+        select[0].value = hash;
+
+        function replaceTextRecursive(element, translation) {
+            if (element.nodeType === Node.TEXT_NODE) {
+                const originalText = element.textContent.trim();
+                if (originalText) {
+                    element.textContent = translation;
+                }
+            } else if (element.nodeType === Node.ELEMENT_NODE) {
+                const childNodes = Array.from(element.childNodes);
+                childNodes.forEach(node => {
+                    replaceTextRecursive(node, translation);
+                });
+            }
+        };
+    
+        for (let key in lang) {
+            const elem = document.querySelector('.ln-' + key);
+    
+            if (elem) {
+                const translation = lang[key][hash];
+                replaceTextRecursive(elem, translation);
+            }
+        };
+    };
+
+    changeLanguage();
+
+
+    //form sender
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 

@@ -551,7 +551,7 @@ a {
 }
 
 .why {
-    width: 631px;
+    width: 680px;
     font-family: "Mazzard-SemiBold", Helvetica;
     font-weight: 600;
     color: transparent;
@@ -1662,13 +1662,13 @@ footer ul {
     }
 
     .how-works {
-        display: none;
+        display: block;
         width: 750px;
         height: 700px;
     }
 
     .how-works-2 {
-        display: block;
+        display: none;
         margin-top: 30px;
         width: 90%;
     }
@@ -1678,22 +1678,23 @@ footer ul {
     }
 
     .how-works-texts {
-        display: none;
-        width: 730px;
-        margin-left: 100px;
-        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+        margin-left: 120px;
+        margin-top: 50px;
     }
 
     .how-works-text {
         margin-top: 100px;
         margin-right: 30px;
         font-size: 12px;
-        width: 140px;
-        line-height: 31px;
+        width: 150px;
+        line-height: 20px;
     }
 
     .text-up {
-        margin-top: 140px;
+        margin-bottom: -60px;
     }
 
 
@@ -1996,7 +1997,7 @@ footer ul {
     .how-works-texts {
         width: 1000px;
         margin-left: 75px;
-        margin-top: -30px;
+        margin-top: -10px;
     }
 
     .how-works-text {

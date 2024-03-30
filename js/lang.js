@@ -189,7 +189,7 @@ const lang = {
     },
     deepCheck: {
         ru: 'Глубокая мануальная Проверка ',
-        en: 'Deep Manual Check',
+        en: 'Deep Manual Check ',
     },
     qualityCheck: {
         ru: 'Проверка ',

@@ -1016,6 +1016,73 @@ footer ul {
     line-height: 48px;
 }
 
+/* overlay */
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+
+.popup {
+    position: fixed;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    top: 40vh;
+    width: calc(260px + 90 * (100vw / 1280));
+    border: 1px solid #4A9BE8;
+    background-color: #111730;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.popup-close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 300;
+    z-index: 6;
+}
+
+.popup-title {
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 71px;
+    margin: 0;
+    background-color: #111730;
+    color: #ffffff;
+    font-size: calc(11px + 8 * (100vw / 1280));
+    font-weight: 500;
+    text-align: center;
+}
+
+.popup-button {
+    width: calc(40px + 90 * (100vw / 1280));
+    height: calc(20px + 20 * (100vw / 1280));;
+    font-size: calc(8px + 8 * (100vw / 1280));
+    line-height: 22px;
+    margin-top: 5%;
+    background-color: #38B9FC;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+  
+.popup-button:hover {
+    box-shadow: 0 0 10px #4A9BE8;
+}
 
 
 /* Adaptive */
@@ -1239,11 +1306,35 @@ footer ul {
 
     .how-works-2 {
         display: block;
-        width: 90%;
+        width: 348px;
     }
 
     .how-works-texts {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        position: absolute;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    
+    .how-works-text {
+        margin-top: 50px;
+        margin-right: 0px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .text-up {
+        margin-top: 50px;
+    }
+
+    .text-up-mob {
+        margin-top: 40px;
+    }
+
+    .text-up-mob2 {
+        margin-top: 30px;
     }
 
     .title {

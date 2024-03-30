@@ -2,9 +2,18 @@ import config from './config.js';
 import lang from './lang.js';
 
 document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.overlay');
     const form = document.querySelector('.form');
     const select = document.querySelectorAll('select');
     const languages = ['en', 'ru'];
+
+    document.addEventListener('click', function (event) {
+        if (
+            event.target.classList.contains('popup-close') 
+            || event.target.classList.contains('popup-button')
+            || event.target.classList.contains('overlay')
+        ) overlay.style.display = 'none';
+    });
 
     select.forEach(select => select.addEventListener('change', function() {
         const lang = select.value;
@@ -73,12 +82,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             axios.post(`https://api.telegram.org/bot${config.telegramBotToken}/sendDocument`, formData)
                 .then(response => {
-                    console.log('Ответ сервера: ', response);
-                    alert('Форма и файл успешно отправлены');
+                    console.log('Server response: ', response);
+                    overlay.style.display = 'block';
                 })
                 .catch(error => {
-                    console.error('Ошибка при отправке данных: ', error);
-                    alert('Ошибка при отправке данных');
+                    console.error('Form submit error: ', error);
+                    alert('Form submit error!');
                 });
         } else {
             axios.post(`https://api.telegram.org/bot${config.telegramBotToken}/sendMessage`, {
@@ -87,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 parse_mode: 'HTML'
             })
             .then(response => {
-                console.log('Ответ сервера: ', response);
-                alert('Форма успешно отправлена');
+                console.log('Server response: ', response);
+                overlay.style.display = 'block';
             })
             .catch(error => {
-                console.error('Ошибка при отправке данных: ', error);
-                alert('Ошибка при отправке данных');
+                console.error('Form submit error: ', error);
+                alert('Form submit error!');
             });
         }
     });
